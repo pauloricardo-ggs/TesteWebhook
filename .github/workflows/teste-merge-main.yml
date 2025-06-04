@@ -1,0 +1,19 @@
+name: Test Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print start
+        run: echo "Starting test workflow after merge to main..."
+
+      - name: Wait for 10 seconds
+        run: sleep 10
+
+      - name: Print done
+        run: echo "Test workflow completed successfully!"
